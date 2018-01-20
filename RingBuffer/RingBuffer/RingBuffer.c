@@ -58,24 +58,22 @@ RingBuffer *RingBuffer_Malloc(uint32_t size)
       if(size > 0x80000000UL)
       {
         RING_BUFFER_FREE(fifo);
-        fifo = NULL;
-        return fifo;
+        return NULL;
       }
 
       size = roundup_pow_of_two(size);
     }
 
-    fifo->size   = size;
-    fifo->in     = 0;
-    fifo->out    = 0;
-    fifo->buffer = RING_BUFFER_MALLOC(fifo->size);
+    fifo->buffer = RING_BUFFER_MALLOC(size);
 
     if(fifo->buffer == NULL)
     {
       RING_BUFFER_FREE(fifo);
-      fifo = NULL;
-      return fifo;
+      return NULL;
     }
+
+    fifo->size = size;
+    fifo->in = fifo->out = 0;
   }
 
   return fifo;
@@ -90,7 +88,6 @@ void RingBuffer_Free(RingBuffer *fifo)
 {
   RING_BUFFER_FREE(fifo->buffer);
   RING_BUFFER_FREE(fifo);
-  fifo = NULL;
 }
 
 /**
