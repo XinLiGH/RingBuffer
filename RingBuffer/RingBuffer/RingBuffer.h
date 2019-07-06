@@ -2,7 +2,7 @@
   ******************************************************************************
   * @file    RingBuffer.h
   * @author  XinLi
-  * @version v1.0
+  * @version v1.1
   * @date    15-January-2018
   * @brief   Header file for RingBuffer.c module.
   ******************************************************************************
