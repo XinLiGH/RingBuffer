@@ -36,6 +36,7 @@ extern "C" {
 /* Header includes -----------------------------------------------------------*/
 #include <stdint.h>
 #include <stdbool.h>
+#include <stdlib.h>
 
 /* Macro definitions ---------------------------------------------------------*/
 #define RING_BUFFER_MALLOC(size)  malloc(size)

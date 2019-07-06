@@ -28,7 +28,6 @@
 
 /* Header includes -----------------------------------------------------------*/
 #include "RingBuffer.h"
-#include <stdlib.h>
 #include <string.h>
 
 /* Macro definitions ---------------------------------------------------------*/
