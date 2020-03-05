@@ -2,7 +2,7 @@
   ******************************************************************************
   * @file    RingBuffer.c
   * @author  XinLi
-  * @version v1.1
+  * @version v1.2
   * @date    15-January-2018
   * @brief   Ring buffer module source file.
   ******************************************************************************
@@ -101,7 +101,7 @@ void RingBuffer_Free(RingBuffer *fifo)
   *         the FIFO depending on the free space, and returns the number
   *         of bytes copied.
   */
-uint32_t RingBuffer_In(RingBuffer *fifo, void *in, uint32_t len)
+uint32_t RingBuffer_In(RingBuffer *fifo, const void *in, uint32_t len)
 {
   len = min(len, RingBuffer_Avail(fifo));
 
