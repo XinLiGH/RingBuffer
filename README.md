@@ -11,7 +11,7 @@
 
 * RingBuffer *RingBuffer_Malloc(uint32_t size)
 * void RingBuffer_Free(RingBuffer *fifo)
-* uint32_t RingBuffer_In(RingBuffer *fifo, void *in, uint32_t len)
+* uint32_t RingBuffer_In(RingBuffer *fifo, const void *in, uint32_t len)
 * uint32_t RingBuffer_Out(RingBuffer *fifo, void *out, uint32_t len)
 * void RingBuffer_Reset(RingBuffer *fifo)
 * uint32_t RingBuffer_Size(RingBuffer *fifo)
